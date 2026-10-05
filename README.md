@@ -30,28 +30,7 @@ Homeroom is an open-source, local-first desktop dashboard for organizing everyda
 
 ## Changelog
 
-### 1.0.0 — October 2026
-
-- Added editing across tasks, notes, documents, library resources, media, app shortcuts, and service monitors.
-- Added direct media status and progress editing.
-- Preserved favorites, ratings, local paths, timestamps, and monitor results while editing.
-- Improved icon-action accessibility and activity accuracy for document updates.
-- Reset stale service results when an endpoint URL changes.
-
-### 0.2.0 — October 2026
-
-- Added the 53-week activity graph and retained up to 1,000 workspace events.
-- Added the selectable service inspector with live probe logs, latency, status, and last-check details.
-- Added approved local-folder imports and built-in Markdown, text, and PDF readers.
-- Added light/dark theme palettes for Gruvbox, Tokyo Night, Catppuccin, Nord, and Solarized.
-- Added automatic DMS/Matugen colors with live palette refresh.
-- Improved responsive activity and service layouts and clarified reachability-check limitations.
-
-### 0.1.0 — October 2026
-
-- Initial local-first organizer with projects, tasks, notes, documents, library, media, apps, and services.
-- Added the customizable dashboard, quick capture, global search, and contextual actions.
-- Added secure selected-folder access and portable backup import/export.
+See [CHANGELOG.md](CHANGELOG.md) for unreleased changes and version history. The app's **About** page contains the shorter, user-facing release notes.
 
 ## Privacy
 
@@ -93,8 +72,14 @@ This builds the frontend and desktop app, then installs `homeroom` to `~/.local/
 For distributable system packages, run:
 
 ```bash
-npm run tauri build
+./release.sh
 ```
+
+The script validates the app, builds AppImage, DEB, and RPM packages, and collects them with `SHA256SUMS` under `release/v<version>/`.
+
+For cross-platform installers, open **Actions → Release desktop installers → Run workflow** on GitHub and choose `all`, `linux`, `windows`, or `macos`. The workflow adds the selected AppImage/DEB/RPM, Windows setup `.exe`, or Intel and Apple Silicon `.dmg` files to a draft GitHub release. Review the draft before publishing it.
+
+See [Development and release workflow](WORKFLOW.md) for the short feature-to-release checklist.
 
 ## Verify
 
