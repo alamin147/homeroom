@@ -20,6 +20,7 @@ pub fn run() {
             commands::files::read_text_file,
             commands::files::read_binary_file,
             commands::projects::scan_projects,
+            commands::theme::read_matugen_theme,
         ])
         .run(tauri::generate_context!())
         .expect("failed to run Homeroom");

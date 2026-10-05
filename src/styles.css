@@ -13,6 +13,19 @@
   --shadow: 0 18px 50px rgba(65, 55, 37, .08);
 }
 
+:root[data-theme="dark"] {
+  color: #e9e7df;
+  background: #151a17;
+  --ink: #e9e7df;
+  --muted: #a3aaa3;
+  --paper: #1c231f;
+  --line: #354139;
+  --green: #82b996;
+  --green-soft: #263b30;
+  --amber: #dda06c;
+  --shadow: 0 18px 50px rgba(0, 0, 0, .24);
+}
+
 * { box-sizing: border-box; }
 body { margin: 0; min-width: 320px; min-height: 100vh; }
 button, input, select, textarea { font: inherit; }
@@ -273,3 +286,71 @@ h1, h2 { font-family: Newsreader, serif; }
 .changelog > header { margin-bottom:26px; }.changelog > header h2 { margin:5px 0 7px; font-size:35px; }.changelog > header p { margin:0; color:var(--muted); font-size:12px; }.release-list { display:grid; }.release { display:grid; grid-template-columns:28px 1fr; gap:14px; }.release-rail { display:grid; grid-template-rows:18px 1fr; justify-items:center; }.release-rail span { width:12px; height:12px; margin-top:3px; border:2px solid #9a9d94; border-radius:50%; background:var(--paper); z-index:1; }.release-rail span.current { border-color:var(--green); background:var(--green); box-shadow:0 0 0 5px rgba(49,93,75,.1); }.release-rail i { width:1px; height:100%; background:var(--line); }.release:last-child .release-rail i { background:linear-gradient(var(--line),transparent); }
 .release-content { margin-bottom:30px; padding:0 0 28px; border-bottom:1px solid var(--line); }.release:last-child .release-content { border-bottom:0; }.release-content > header { display:flex; justify-content:space-between; gap:16px; margin-bottom:16px; }.release-content > header > div { display:flex; align-items:center; gap:10px; }.version-number { padding:5px 9px; border-radius:8px; color:#f7f4eb; background:var(--green); font:700 11px ui-monospace,SFMono-Regular,Menlo,monospace; }.release-content > header strong { font-size:13px; }.release-content > header time { color:var(--muted); font-size:10px; }.change-groups { display:grid; gap:13px; }.change-groups section { padding:17px 19px; border:1px solid var(--line); border-radius:13px; background:rgba(250,248,241,.72); }.change-groups h3 { display:flex; align-items:center; gap:7px; margin:0 0 10px; color:var(--green); font-size:12px; }.change-groups ul { display:grid; gap:7px; margin:0; padding-left:18px; color:#5f645c; font-size:11px; line-height:1.55; }
 @media (max-width:720px) { .about-hero { align-items:flex-start; flex-direction:column; padding:24px; }.about-mark { width:58px; height:58px; border-radius:18px 18px 7px 18px; font-size:32px; }.about-hero h1 { font-size:40px; }.developer-card { grid-template-columns:48px 1fr; padding:20px; }.developer-avatar { width:48px; height:48px; }.developer-heart { display:none; }.developer-links { align-items:flex-start; flex-direction:column; gap:8px; }.release-content > header { align-items:flex-start; flex-direction:column; }.release-content > header time { margin-left:0; } }
+
+/* Dark appearance */
+[data-theme="dark"] .sidebar { background:rgba(24,31,27,.9); }
+[data-theme="dark"] .sidebar nav button,
+[data-theme="dark"] .collapse-button,
+[data-theme="dark"] .command-hint { color:#a3aaa3; }
+[data-theme="dark"] .sidebar nav button.active,
+[data-theme="dark"] .button.primary,
+[data-theme="dark"] .brand-mark,
+[data-theme="dark"] .service-summary,
+[data-theme="dark"] .version-number,
+[data-theme="dark"] .quick-complete:hover { color:#132018; }
+[data-theme="dark"] .service-summary span,
+[data-theme="dark"] .service-summary p { color:#294035; }
+[data-theme="dark"] .widget,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .document-row,
+[data-theme="dark"] .task-row,
+[data-theme="dark"] .resource-card,
+[data-theme="dark"] .media-card,
+[data-theme="dark"] .app-card,
+[data-theme="dark"] .service-list article,
+[data-theme="dark"] .home-setup,
+[data-theme="dark"] .overview-bar,
+[data-theme="dark"] .contribution-panel,
+[data-theme="dark"] .service-inspector,
+[data-theme="dark"] .developer-card,
+[data-theme="dark"] .change-groups section { background:rgba(28,35,31,.82); }
+[data-theme="dark"] .search-field,
+[data-theme="dark"] .reader-header,
+[data-theme="dark"] .pdf-toolbar { background:rgba(28,35,31,.94); }
+[data-theme="dark"] .stack-form input,
+[data-theme="dark"] .stack-form textarea,
+[data-theme="dark"] .stack-form select,
+[data-theme="dark"] .settings-section input,
+[data-theme="dark"] .settings-section select,
+[data-theme="dark"] .widget-options > button { background:#202823; }
+[data-theme="dark"] .filter-pills,
+[data-theme="dark"] .segmented,
+[data-theme="dark"] .capture-tabs { background:#252e29; }
+[data-theme="dark"] .button.ghost,
+[data-theme="dark"] .icon-button:hover,
+[data-theme="dark"] .palette-results button:hover,
+[data-theme="dark"] .palette-result:hover { background:#29332d; }
+[data-theme="dark"] .reader-content { background:#111613; }
+[data-theme="dark"] .reader-markdown,
+[data-theme="dark"] .reader-text { background:#1a211d; }
+[data-theme="dark"] .reader-markdown code { background:#29322d; }
+[data-theme="dark"] .progress,
+[data-theme="dark"] .media-progress,
+[data-theme="dark"] .contribution-cell { background:#303a34; }
+[data-theme="dark"] .status { color:#bdc2bc; background:#303832; }
+[data-theme="dark"] .priority { color:#c4b9a8; background:#37342e; }
+[data-theme="dark"] .priority.high { color:#eda08e; background:#482d29; }
+[data-theme="dark"] .priority.low { color:#a9c7ad; background:#293a2e; }
+[data-theme="dark"] .note-card { color:#e8dfcc; background:#3b3424; border-color:#534a35; }
+[data-theme="dark"] .note-card.sage { background:#293a2c; }
+[data-theme="dark"] .note-card.lavender { background:#35303e; }
+[data-theme="dark"] .note-card.clay { background:#402f29; }
+[data-theme="dark"] .note-card > header,
+[data-theme="dark"] .note-card > footer { color:#bcb8ae; }
+[data-theme="dark"] .about-hero { background:linear-gradient(135deg,rgba(28,35,31,.96),rgba(38,59,48,.72)); }
+[data-theme="dark"] .version-pill { background:rgba(130,185,150,.1); }
+[data-theme="dark"] .change-groups ul,
+[data-theme="dark"] .stack-form label,
+[data-theme="dark"] .settings-section label,
+[data-theme="dark"] .tags span { color:#bec4be; }
+[data-theme="dark"] .service-workspace .service-list article.selected { background:#243129; }

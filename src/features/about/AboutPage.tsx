@@ -3,8 +3,18 @@ import packageJson from "../../../package.json";
 
 const releases = [
   {
-    version: "0.2.0",
+    version: "1.0.0",
     label: "Current release",
+    date: "October 2026",
+    groups: [
+      { title: "Added", icon: Sparkles, items: ["Full editing for tasks, notes, documents, library resources, media, app shortcuts, and service monitors.", "Direct progress and status editing for media entries."] },
+      { title: "Improved", icon: Rocket, items: ["Edit forms preserve creation details, favorites, ratings, local-file links, and monitoring results.", "Icon-only actions now expose descriptive labels for assistive technology."] },
+      { title: "Fixed", icon: Bug, items: ["Edited documents are now recorded as updates instead of duplicate creation activity.", "Changing a monitored service URL clears stale reachability results."] },
+    ],
+  },
+  {
+    version: "0.2.0",
+    label: "Previous release",
     date: "October 2026",
     groups: [
       { title: "Added", icon: Sparkles, items: ["GitHub-style 53-week activity contribution graph with daily intensity and totals.", "Selectable service inspector with live terminal-style reachability logs.", "Local folder imports plus in-app Markdown, text, and PDF readers."] },

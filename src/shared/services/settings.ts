@@ -1,5 +1,6 @@
 export type SettingKey =
   | "appearance.theme"
+  | "appearance.palette"
   | "projects.defaultArea"
   | "documents.defaultKind"
   | "tasks.defaultPriority"

@@ -16,9 +16,10 @@ export function useDocuments() {
   useEffect(() => { void reload(); }, [reload]);
 
   async function save(document: Document) {
+    const exists = documents.some(({ id }) => id === document.id);
     await documentProvider.save(document);
-    appEvents.emit("document:created", document);
-    appEvents.emit("entity:changed", { action: "created", entity: document });
+    if (!exists) appEvents.emit("document:created", document);
+    appEvents.emit("entity:changed", { action: exists ? "updated" : "created", entity: document });
     await reload();
   }
   async function remove(id: string) {

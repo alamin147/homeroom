@@ -1,7 +1,7 @@
 {
   "name": "home-lab",
   "private": true,
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A local-first personal desktop dashboard",
   "author": "Alamin <alamin.14780@gmail.com>",
   "license": "MIT",
