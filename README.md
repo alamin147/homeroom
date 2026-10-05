@@ -23,8 +23,8 @@ sudo dnf install webkit2gtk4.1-devel libsoup3-devel
 ## Setup
 
 ```bash
-git clone <repository-url>
-cd home-lab
+git clone https://github.com/alamin147/homeroom.git
+cd homeroom
 npm install
 npm run tauri dev
 ```
