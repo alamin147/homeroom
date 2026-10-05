@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+.token-optimizer/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+.DS_Store
+*.log

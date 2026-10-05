@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Homeroom
+GenericName=Personal Dashboard
+Comment=Organize projects, tasks, notes, documents, and media
+Exec=/home/alamin/.local/bin/homeroom
+Icon=dev.homeroom.desktop
+Terminal=false
+Categories=Office;Utility;
+Keywords=projects;tasks;notes;documents;media;
+StartupNotify=true
+StartupWMClass=homeroom
